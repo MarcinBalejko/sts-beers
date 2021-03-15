@@ -79,11 +79,6 @@ const App = () => {
     fetchBeersData();
   }, []);
 
-  // Just for the purpose of checking current settings state
-  useEffect(() => {
-    console.log("This comes from APP settings", appSettings);
-  }, [appSettings]);
-
   // Fetching selected num of beers -> fetching brewers
   useEffect(() => {
     fetchBrewers();
