@@ -1,0 +1,153 @@
+.col-container {
+  display: flex;
+  margin: 2vh auto  auto;
+  height: 75vh;
+  width: 85vw;
+
+  .column.scrolling {
+    overflow-y: scroll;
+  }
+
+  .column {
+    height: 100%;
+    width: 100%;
+    margin: 0 2px;
+
+    &__dropdown {
+      height: 40px;
+
+      button {
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        border: none;
+        outline: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+
+      button:active {
+        opacity: 0.8;
+      }
+    }
+
+    &__dropdown:hover {
+      opacity: 0.9;
+    }
+
+    &__brewer-list-container {
+      width: 100%;
+      .brewer-list {
+        position: absolute;
+        background-color: #fff;
+        overflow-y: scroll;
+        min-height: 60%;
+        width: 28%;
+        height: 0;
+        border: 1px solid black;
+        border-radius: 2px;
+      }
+
+      ul {
+        list-style: none;
+        line-height: 2rem;
+      }
+
+      li {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        margin-left: 0.7rem;
+        transition: opacity 0.2s ease;
+      }
+
+      li:hover {
+        background: #333;
+        color: white;
+      }
+
+      li:active {
+        opacity: 0.5;
+      }
+    }
+
+    &__brewer-list-container.hidden {
+      display: none;
+    }
+  }
+}
+
+
+// Light / Dark Mode
+
+.light-mode--beer-column {
+    background-color: rgb(255, 255, 255);
+  border-color: orange;
+  color: #333;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+
+
+}
+
+.column__dropdown-button.dark-mode_dropdown-btn {
+  background-color: black;
+  border-color: #c96dfd;
+  color: #999
+}
+
+.column__dropdown-button.light-mode_dropdown-btn {
+  background-color: rgb(255, 255, 255);
+  border-color: $pumpkin-color;
+  color: #333;
+
+}
+
+
+.column__dropdown-button.dark-mode-column-dropdown-btn {
+  background-color: black;
+}
+             
+.column__dropdown-button.light-mode-column-dropdown-btn {
+  background-color: orange;
+}
+
+
+//  // Adjusting scrollbar  // //
+// Works on Firefox //
+.column {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(51, 50, 50, 0.9) rgb(255, 255, 255);
+}
+
+// Works on Chrome, Edge, and Safari //
+.column::-webkit-scrollbar {
+  width: 12px;
+}
+
+.column::-webkit-scrollbar-track {
+  background: rgba(51, 50, 50, 0.9);
+}
+
+.column::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 3px solid rgba(51, 50, 50, 0.9);
+}
+
+
+@media (max-width: 640px) { 
+  .column {
+    border: none;
+    max-width: 35%;
+    max-height: auto;
+    margin: 0 2px;
+    overflow-x: hidden
+}
+}
+
+@media (min-width: 641px) { 
+    .column {
+      border: 1px solid rgb(163, 158, 158);
+      overflow-x: hidden
+  }
+}

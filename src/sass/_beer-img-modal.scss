@@ -1,0 +1,31 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+
+    img{
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        display: block;
+        width: 40%;
+        height: 60%;
+        margin: 60px auto;
+        box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+        border: 3px solid white;
+      }
+
+      @media (max-width: 640px) { 
+        img{
+            top:25%;
+            left: 8%;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+        }
+      }
+  }
+

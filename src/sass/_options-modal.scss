@@ -1,0 +1,208 @@
+.options-container {
+  position: absolute;
+  top: 8vh;
+  right: 0;
+  background-color: #fff;
+  z-index: 3;
+  width: 400px;
+  max-height: 48vh;
+  border: 1px solid black;
+  border-radius: 10px 0 0 10px;
+
+  &__options-window {
+    .options-header {
+      margin: 5% 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      i {
+        transform: translateY(30%);
+      }
+    }
+  }
+}
+
+.form-group {
+  margin: 5% 10%;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+hr {
+  height: 1px;
+  border-bottom: 1px solid black;
+  width: 90%;
+  margin: auto;
+}
+
+.close-options-btn {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.confirm-settings-btn {
+  height: 30px;
+  width: 100px;
+  margin: 5% 5%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  float: right;
+  font-weight: 700;
+}
+
+.close-options-btn:active,
+.confirm-settings-btn:active {
+  transform: scale(0.8);
+  opacity: 0.8;
+}
+
+select,
+select:focus {
+  outline: none;
+}
+
+.sun-icon,
+.moon-icon {
+  font-size: 20px;
+}
+
+
+.dark-mode {
+  background-color: #1a1919;
+  border-color: #c96dfd;
+  color: #999;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.light-mode {
+  background-color: rgb(255, 255, 255);
+  border-color: orange;
+  color: #333;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+
+
+}
+
+
+.change-mode-container {
+  margin: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > span {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .switch-container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 14px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #19a2c1;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch-checkbox {
+  padding: 10px;
+}
+
+@media (max-width: 640px) { 
+  .options-container {
+
+    width: 300px;
+    max-height: 48vh;
+ 
+  }
+}
+
+@media (max-width: 640px) { 
+  .options-container {
+
+    width: 300px;
+    max-height: 48vh;
+ 
+  }
+}

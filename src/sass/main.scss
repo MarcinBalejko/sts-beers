@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@import "base";
+@import "beer-img-modal";
+@import "beer-item";
+@import "column-screen";
+@import "navbar";
+@import "footer";
+@import "options-modal";
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  &.dark-background {
+    background-color: rgba(51, 50, 50, 0.9);
+  }
+
+  &.light-background {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.column-section {
+  height: 80vh;
+}
+

@@ -1,0 +1,32 @@
+
+.navbar {
+  background-color: rgb(26, 25, 25);
+  color: #fff;
+
+  &__content {
+    display: flex;
+    height: 8vh;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+    &__options-btn {
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    &__options-btn:active {
+      transform: scale(0.8);
+      opacity: 0.8;
+    }
+
+    h1 {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.footer-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+// Light / Dark Mode
+
+.dark-mode-footer {
+    background-color: rgb(26, 25, 25);
+
+}
+
+.light-mode-footer {
+    border-top: 1px solid orange;
+    background-color: rgb(255, 255, 255);
+}

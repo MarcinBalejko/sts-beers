@@ -1,0 +1,66 @@
+.beer {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  opacity: 1;
+  padding: 1rem 2rem;
+  margin: 2% 4%;
+  border-radius: 10px;
+  box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.2);
+
+  &__info {
+    font-size: 0.9rem;
+    margin-left: 25%;
+
+    p {
+      line-height: 1.5rem;
+    }
+
+    p:nth-of-type(3) {
+      font-weight: 700;
+    }
+  }
+
+  &__image-container {
+    margin-left: 5%;
+  }
+
+  &__image {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+  }
+
+}
+
+// Dark / Light mode
+.beer.beer-dark-mode {
+  background-color: rgb(10, 10, 10);
+  color: #fff;
+}
+
+.beer.beer-light-mode {
+  background-color: #fff;
+}
+
+
+.beer__info.dark-mode-info {
+  background-color: rgb(10, 10, 10);
+  color: #fff;
+}
+
+.beer__info.light-mode-info {
+  background-color: #fff;}
+
+
+
+@media (max-width: 640px) { 
+  .beer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+
